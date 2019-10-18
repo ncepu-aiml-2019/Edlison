@@ -8,5 +8,3 @@
 
 ## Links  
 [My Blog](http://blog.edlison.xyz/)  
-
-test
