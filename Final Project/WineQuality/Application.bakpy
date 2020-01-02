@@ -1,0 +1,24 @@
+import numpy as np
+
+# need over sample?
+
+
+def file2matrix(filename):
+    data = open(filename)
+    numberOfLines = len(data.readlines())
+    matrix = np.zeros(numberOfLines, 12)
+
+    index = 0
+    for line in data.readlines():
+        line = line.strip()
+        listFromLine = line.split(";")
+        matrix[index, :] = listFromLine[0:12]
+        index += 1
+
+    label = matrix[0, :]
+    matrix = matrix[1:index, 0:12]
+
+    return matrix, label
+
+
+
